@@ -1,0 +1,288 @@
+/* Universal Reset and Basic Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9; /* Light background */
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header and Navigation */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00bcd4; /* Accent color on hover */
+}
+
+/* Sections Styling */
+.section {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.section:nth-child(even) {
+    background: #e9e9ee; /* Subtle alternating background */
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #00bcd4;
+}
+
+/* --- Hero Section (UPDATED) --- */
+.hero {
+    background: #2a2a2a;
+    color: #fff;
+    padding: 200px 0 150px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* New Grid for Hero Content and Photo */
+.hero-content-grid {
+    display: grid;
+    /* CHANGED (Line 87): Columns are now equal for better visual balance (1fr 1fr) */
+    grid-template-columns: 1fr 1fr; 
+    align-items: center;
+    gap: 60px; /* Reduced gap */
+    
+    /* NEW (Line 91-92): Restrict the width and center the grid itself */
+    max-width: 900px; 
+    margin: 0 auto;
+}
+
+.hero-text-content {
+    /* CHANGED (Line 96): Reverting to left-align for professional look now that the entire block is centered */
+    text-align: left; 
+}
+
+.hero-text-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.hero-text-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
+/* Profile Photo Styling */
+.profile-photo-container {
+    text-align: center; /* Center the image within its grid column */
+}
+
+.profile-photo {
+    width: 250px;
+    height: 250spx;
+    object-fit: cover;
+    border-radius: 50%; /* Makes the image circular */
+    border: 5px solid #00bcd4; /* Accent border */
+    box-shadow: 0 0 0 8px rgba(0, 188, 212, 0.3); /* Subtle outer glow */
+    transition: transform 0.4s;
+}
+
+.profile-photo:hover {
+    transform: scale(1.05) rotate(3deg); /* Interactive hover effect */
+}
+/* --- End Hero Section Updates --- */
+
+/* Profile Photo Styling */
+.profile-photo {
+    /* New: Force the image to be a block element */
+    display: block; 
+    /* New: Use margin: auto for horizontal centering */
+    margin: 0 auto 30px auto; 
+    /* The 30px is for margin at the bottom, separating it from the h2 */
+
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%; /* Makes the image circular */
+    border: 5px solid #00bcd4; /* Accent border */
+    box-shadow: 0 0 0 8px rgba(0, 188, 212, 0.3); /* Subtle outer glow */
+    transition: transform 0.4s;
+}
+
+/* You can remove the .profile-photo-container style entirely now, as it's not needed */
+.profile-photo-container {
+    /* REMOVE THIS BLOCK IF YOU WANT */
+    text-align: center; 
+}
+
+.cta-button {
+    display: inline-block;
+    background: #00bcd4;
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.cta-button:hover {
+    background: #0097a7;
+}
+
+/* Skills Section */
+.skills-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.skills-list li {
+    background: #5abd92;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    border-radius: 25px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Portfolio Section */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.project-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    color: #00bcd4;
+    margin-bottom: 10px;
+}
+
+.project-card a {
+    color: #00bcd4;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Section */
+.contact-section a {
+    color: #3a3d3d;
+    text-decoration: none;
+}
+
+.contact-section a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+}
+
+/* --- STYLES FOR "Say Hello!" BUTTON (Kept for consistency) --- */
+
+/* Target the cta-button within the contact-section for unique styling */
+.contact-section .cta-button {
+    /* Larger size for prominence */
+    font-size: 1.25rem;
+    padding: 15px 40px;
+    margin: 20px auto 30px; /* Center and add vertical space */
+    
+    /* Make it look like a button, not just text */
+    border: 3px solid #00bcd4; /* Bolder border */
+    border-radius: 50px; /* Pill shape */
+}
+
+/* Enhanced Hover Effect for "Say Hello!" */
+.contact-section .cta-button:hover {
+    /* Use a contrasting color for the background on hover */
+    background: #101011; /* A warm orange/red */
+    border-color: #ece7e6;
+    color: #fff;
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 8px 15px rgba(255, 87, 34, 0.4); /* Glow effect */
+}
+
+/* Responsive adjustments for the new Hero layout */
+@media (max-width: 900px) {
+    /* On smaller screens, stack the content and center everything */
+    .hero-content-grid {
+        grid-template-columns: 1fr; /* Single column */
+        text-align: center;
+    }
+    
+    .hero-text-content {
+        order: 2; /* Put text content below the photo */
+        margin-top: 30px;
+    }
+    
+    .profile-photo-container {
+        order: 1; /* Put photo on top */
+    }
+    
+    .profile-photo {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .hero-text-content h1 {
+        font-size: 3rem;
+    }
+}
